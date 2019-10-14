@@ -17,13 +17,14 @@ Here is my first R Markdown document.
 
 # Let's embed some R code
 
-We'll write an R chunk that loads the tidyverse package and then reads in the Gapminder datset from the data of the project.
+We'll write an R chunk that loads the tidyverse package and then reads in the Gapminder datset from the data of the project. gggg
 
 CTRL+ALT+i (to insert code chunk)
 
 ```{r}
 library(tidyverse)
 gm <- read.csv("Data/gapminder.csv")
+
 ```
 
 # Investigate gm data
