@@ -21,7 +21,7 @@ We'll write an R chunk that loads the tidyverse package and then reads in the Ga
 
 CTRL+ALT+i (to insert code chunk)
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 gm <- read.csv("Data/gapminder.csv")
 

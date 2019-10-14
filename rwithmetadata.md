@@ -17,7 +17,7 @@ Here is my first R Markdown document.
 
 # Let's embed some R code
 
-We'll write an R chunk that loads the tidyverse package and then reads in the Gapminder datset from the data of the project.
+We'll write an R chunk that loads the tidyverse package and then reads in the Gapminder datset from the data of the project. gggg
 
 CTRL+ALT+i (to insert code chunk)
 
@@ -28,17 +28,6 @@ library(tidyverse)
 
 ```
 ## Warning: package 'tidyverse' was built under R version 3.6.1
-```
-
-```
-## -- Attaching packages -------------------------------------------- tidyverse 1.2.1 --
-```
-
-```
-## v ggplot2 3.2.1     v purrr   0.3.2
-## v tibble  2.1.3     v dplyr   0.8.3
-## v tidyr   0.8.3     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.4.0
 ```
 
 ```
@@ -71,12 +60,6 @@ library(tidyverse)
 
 ```
 ## Warning: package 'forcats' was built under R version 3.6.1
-```
-
-```
-## -- Conflicts ----------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
 ```
 
 ```r
