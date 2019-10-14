@@ -1,0 +1,91 @@
+---
+title: "Gapminder Analysis"
+author: "Indika Mallawaarachchi"
+date: "10/14/2019"
+output:
+  html_document:
+    keep_md: yes
+    fig_caption: yes
+    toc: yes
+  pdf_document:
+    toc: yes
+---
+
+# Introduction
+
+Here is my first R Markdown document.
+
+# Let's embed some R code
+
+We'll write an R chunk that loads the tidyverse package and then reads in the Gapminder datset from the data of the project.
+
+CTRL+ALT+i (to insert code chunk)
+
+```{r}
+library(tidyverse)
+gm <- read.csv("Data/gapminder.csv")
+```
+
+# Investigate gm data
+
+```{r}
+head(gm)
+```
+
+# Our first plot
+
+Showing life expentancy vs gdp per capita 
+
+```{r, fig.cap="Fig1: Life expentancy vs GDP"}
+ggplot(gm,aes(x=gdpPercap, y=lifeExp))+geom_point()
+```
+
+
+# Better plot
+
+Showing life expentancy vs gdp per capita 
+
+```{r, fig.cap="Fig1: Life expentancy vs GDP"}
+ggplot(gm,aes(x=gdpPercap, y=lifeExp))+geom_point(aes(col=continent))+
+  scale_x_log10()
+```
+
+# Possible chunk options
+
+https://yihui.name/knitr/options/
+
+Options include:
+- echo (TRUE by default) whether to include code in output
+- results 
+  - hide will hide the results
+  - hold will hold all the results until the end of r chuck (show the code first and results later)
+  - include (TRUE by default) if FALSE then the code will not run
+  - fig.width, fig.height set the figure dimentions in the output
+  - cache (FALSE by default) if TRUE save results from R chunk for the next time to save running time. Just running the new code.
+
+# Better plot changing dimetions
+
+Showing life expentancy vs gdp per capita 
+
+```{r, fig.cap="Fig1: Life expentancy vs GDP", fig.width=4}
+ggplot(gm,aes(x=gdpPercap, y=lifeExp))+geom_point(aes(col=continent))+
+  scale_x_log10()
+```
+
+# RMarkdown table
+
+see some data using head function
+
+```{r}
+head(gm)
+```
+
+new head function as a table
+
+```{r}
+library(knitr)
+kable(head(gm))
+```
+
+if you like tables, look at **gt** table package.
+
